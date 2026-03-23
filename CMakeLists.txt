@@ -38,7 +38,7 @@ endif()
 
 __compiler_armcc(C)
 
-file(GLOB_RECURSE csourcefiles "Source/*.c")
+file(GLOB_RECURSE csourcefiles "src/*.cpp")
 
 add_library(LibMessageStudio ${csourcefiles})
 
@@ -50,4 +50,4 @@ target_compile_options(LibMessageStudio PUBLIC $<$<COMPILE_LANGUAGE:C>:
 
 target_compile_definitions(LibMessageStudio PUBLIC NON_MATCHING=)
 
-target_include_directories(LibMessageStudio PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/Include)
+target_include_directories(LibMessageStudio PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)

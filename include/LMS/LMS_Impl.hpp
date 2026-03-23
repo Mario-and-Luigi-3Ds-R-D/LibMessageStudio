@@ -1,6 +1,6 @@
 #pragma once
 
-#include "LMS/LMS_Types.h"
+#include "LMS/LMS_Types.hpp"
 
 #ifdef __cplusplus
 extern "C" {

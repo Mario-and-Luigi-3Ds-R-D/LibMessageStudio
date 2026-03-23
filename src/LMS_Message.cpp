@@ -1,4 +1,4 @@
-#include "LMS/LMS_Message.h"
+#include "LMS/LMS_Message.hpp"
 
 typedef struct TextHeader {
     u32 numMessages;

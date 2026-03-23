@@ -1,6 +1,6 @@
 #pragma once
 
-#include "LMS/LMS_Impl.h"
+#include "LMS/LMS_Impl.hpp"
 #include <stddef.h>
 
 #ifdef __cplusplus
