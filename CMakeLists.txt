@@ -30,13 +30,15 @@ if (WIN32)
     set(CMAKE_ASM_COMPILER_WORKS TRUE)
 endif()
 
-project(LibMessageStudio C)
+project(LibMessageStudio C CXX ASM)
 
 if (NOT WIN32)
     set_compilers()
 endif()
 
 __compiler_armcc(C)
+__compiler_armcc(CXX)
+__compiler_armcc(ASM)
 
 file(GLOB_RECURSE csourcefiles "src/*.cpp")
 

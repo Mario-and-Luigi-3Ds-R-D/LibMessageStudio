@@ -6,7 +6,7 @@ typedef struct TextHeader {
 
 LMS_MessageBinary* LMS_InitMessage(const void* data)
 {
-    LMS_MessageBinary* msg = LMSi_Malloc(sizeof(LMS_MessageBinary));
+    LMS_MessageBinary* msg = (LMS_MessageBinary*)LMSi_Malloc(sizeof(LMS_MessageBinary));
     msg->common.data = data;
     LMSi_AnalyzeMessageBinary(&msg->common, "MsgStdBn");
     msg->labelsIndex = LMSi_SearchBlockByName(&msg->common, "LBL1");

@@ -6,7 +6,7 @@
 extern "C" {
 #endif
 
-_Bool LMSi_MemCmp(const void*, const void*, u32 size);
+bool LMSi_MemCmp(const void*, const void*, u32 size);
 
 typedef void* (*LMS_AllocFuncPtr)(u32 size);
 typedef void (*LMS_FreeFuncPtr)(void* ptr);
