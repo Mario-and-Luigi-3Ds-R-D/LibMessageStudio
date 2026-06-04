@@ -1,20 +1,6 @@
 #pragma once
 
-#include "LMS/LMS_Types.hpp"
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-bool LMSi_MemCmp(const void*, const void*, u32 size);
-
-typedef void* (*LMS_AllocFuncPtr)(u32 size);
-typedef void (*LMS_FreeFuncPtr)(void* ptr);
-
-void* LMSi_Malloc(u32 size);
-void LMSi_Free(void* ptr);
-
-void LMS_SetMemFuncs(LMS_AllocFuncPtr alloc_ptr, LMS_FreeFuncPtr free_ptr);
+#include "LMS/types.h"
 
 typedef struct LMS_BinaryBlock {
     const void* data;
@@ -39,7 +25,3 @@ typedef struct LMS_Binary {
 
 void LMSi_AnalyzeMessageBinary(LMS_Binary* binary, const char* magic);
 s32 LMSi_SearchBlockByName(LMS_Binary* binary, const char* blockName);
-
-#ifdef __cplusplus
-}
-#endif

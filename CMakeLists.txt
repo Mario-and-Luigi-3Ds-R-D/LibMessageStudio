@@ -40,7 +40,7 @@ __compiler_armcc(C)
 __compiler_armcc(CXX)
 __compiler_armcc(ASM)
 
-file(GLOB_RECURSE csourcefiles "src/*.cpp")
+file(GLOB_RECURSE csourcefiles "src/*.c")
 
 add_library(LibMessageStudio ${csourcefiles})
 

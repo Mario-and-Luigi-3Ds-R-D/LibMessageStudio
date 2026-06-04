@@ -1,5 +1,7 @@
 #pragma once
 
+#include <stdbool.h>
+
 #define NULL 0
 
 typedef signed char s8;
