@@ -21,7 +21,7 @@ void LMSi_MemCopy(const void* dest, const void* src, s32 size){
         ((u8*)dest)[i] = ((u8*)src)[i];
     }
 }
-// Nonmatching because of branchs
+
 s32 LMSi_MemCmp(const void* ptr1, const void* ptr2, s32 size){
     const s8* ptr1Char = (const s8*)ptr1;
     const s8* ptr2Char = (const s8*)ptr2;

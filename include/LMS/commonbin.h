@@ -23,5 +23,12 @@ typedef struct LMS_Binary {
     LMS_BinaryBlock* blocks;
 } LMS_Binary;
 
-void LMSi_AnalyzeMessageBinary(LMS_Binary* binary, const char* magic);
+typedef struct LMSBinaryInfo{
+    void* unk;
+} LMSBlockInfo;
+
+s32 LMSi_GetHashTableIndexFromLabel(const char* label, u32 numSlots);
 s32 LMSi_SearchBlockByName(LMS_Binary* binary, const char* blockName);
+void LMSi_AnalyzeMessageBinary(LMS_Binary* binary, const char* magic);
+void LMSi_AnalyzeMessageHeader(LMS_Binary* binary);
+LMS_Binary* LMSi_AnalyzeMessageBlocks(LMS_Binary* binary);
